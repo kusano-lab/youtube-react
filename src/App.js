@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Top from './pages/Top';
 import Search from './pages/Search';
 import Watch from './pages/Watch';
+import 'normalize.css'
+import './App.css'
 
 function App() {
   return (
