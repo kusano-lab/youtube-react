@@ -1,0 +1,11 @@
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    li {
+        padding: 10px;
+        width: 150px;
+        a {
+            display: block;
+        }
+    }
+}

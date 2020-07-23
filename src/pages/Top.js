@@ -3,6 +3,7 @@ import Layout from '../components/Layout/Layout'
 import { fetchPopularData } from '../api/index'
 import { v4 as uuid } from 'uuid'
 import { Store } from '../store/index'
+import Style from './Top.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
@@ -22,7 +23,7 @@ const VideoData = () => {
   }, [])
 
   return (
-    <ul>
+    <ul className={Style.grid}>
     {globalState.popular.map(item => (
       <li key={uuid()}>
         <a href={`www.youtube.com/watch?v=${item.id}`}>
