@@ -3,6 +3,8 @@ import Layout from '../components/Layout/Layout'
 import { fetchPopularData } from '../api/index'
 import { v4 as uuid } from 'uuid'
 import { Store } from '../store/index'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 const VideoData = () => {
   const { globalState, setGlobalState } = useContext(Store)
@@ -37,7 +39,7 @@ const VideoData = () => {
 const Top = () => {
   return (
     <Layout>
-      <h1>Top page</h1>
+      <h1>Top page <FontAwesomeIcon icon={faCoffee} /></h1>
       <VideoData />
     </Layout>
   )
