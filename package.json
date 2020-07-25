@@ -13,7 +13,9 @@
     "normalize.css": "^8.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-linkify": "^1.0.0-alpha",
+    "react-scripts": "3.4.1",
+    "react-youtube": "^7.11.3"
   },
   "scripts": {
     "start": "react-scripts start",

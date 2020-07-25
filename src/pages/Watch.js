@@ -1,10 +1,13 @@
 import React from 'react'
+import Layout from '../components/Layout/Layout'
+import VideoDetail from '../components/VideoDetail'
 
 const Watch = () => {
   return (
-    <div>
+    <Layout>
       Watch app
-    </div>
+      <VideoDetail />
+    </Layout>
   )
 }
 

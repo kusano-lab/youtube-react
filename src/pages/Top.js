@@ -26,7 +26,7 @@ const VideoData = () => {
     <ul className={Style.grid}>
     {globalState.popular.map(item => (
       <li key={uuid()}>
-        <a href={`www.youtube.com/watch?v=${item.id}`}>
+        <a href={`/watch?v=${item.id}`}>
           <img src={item.snippet.thumbnails.default.url} alt=""/>
           <p>{item.snippet.title}</p>
         </a>
