@@ -1,12 +1,34 @@
-import React from 'react'
+import React, { useEffect, useContext } from 'react'
 import Layout from '../components/Layout/Layout'
 import VideoDetail from '../components/VideoDetail'
+import SideList from '../components/SideList'
+import { Store } from '../store/index'
+import { useLocation } from 'react-router-dom'
+import { fetchSelectedData, fetchRelatedData } from '../api/index'
 
 const Watch = () => {
+  const { globalState, setGlobalState } = useContext(Store)
+  const location = useLocation()
+  const setVideos = async () => {
+    const searchParams = new URLSearchParams(location.search)
+    const id = searchParams.get('v')
+    if(id) {
+      const result = await Promise.all([fetchSelectedData(id), fetchRelatedData(id)])
+      console.log('result', result)
+    }
+  }
+
+  useEffect(() => {
+    setVideos()
+  }, [location.search])
+
   return (
     <Layout>
       Watch app
+      <hr />
       <VideoDetail />
+      <hr />
+      <SideList />
     </Layout>
   )
 }
